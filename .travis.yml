@@ -8,7 +8,7 @@ before_script:
 script: ./vendor/bin/phpunit ./tests
 deploy:
   provider: heroku
-  app: tarea6-camilo
+  app: tarea6-cami500
   on: master
   skip_cleanup: true
   api_key:
