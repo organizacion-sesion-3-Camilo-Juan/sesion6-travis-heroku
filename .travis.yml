@@ -1,0 +1,15 @@
+language: php
+php:
+  - 7.2
+services:
+  - mysql
+before_script:
+  - composer install
+script: ./vendor/bin/phpunit ./tests
+deploy:
+  provider: heroku
+  app: tarea6-camilo
+  on: master
+  skip_cleanup: true
+  api_key:
+    secure: HrwbyKCeu3Rro3EucKqc64XcCPPnQZz45jxuq3VU0RXm/8/wwJO57J6cuUrHNgsg+OWDU+NjYkhriUiSc5m4+gfDNewRVBMqkd8kPzIdRa5+63szk86PudLz6LAfRiupH7fREt6MwdqwvTxUjDWjN1Oibw6FFbNroQuQ2CUn63xbWzoqZfL+Kv8+H/eLb465c6SBrBKKwnYUpkcv2OzxuBOI3G9LS3RLrVE7D+Y/tBbu03HcgwBVAsYZC8P9TugEhvJslbqPWnonSS8G7vSYJc/pAt/ziMagB759CHv8Z///WfX+SiLi5zz7iK4rPYkx7UnRMO07ePWT6ag+/ggNXETCEYHZ67z+QqioCPBOpp09Gv9UzsEUslTh392gFVtAt/jUjSL//cBUeLiyRu6v4cXt12hcxSDb19ggkVFf0CCnhkr0CZnKMwBdYu8S43vcRM8EO769s5gXrfpWFYckthLfUx32HqwhYC1HGFi0JYHl45sv/DsAV4IsryAHs+R1y2ALgAPtuRxpRGvrkt2uqmgCNB8rpBvIq/3vXTMYTHbwLJdpmCExHDqt9Y1wLbQAbvbBUakh41WWzwWKNlhvLAQnZFNjqcjx1jCIofQu6BUUn3qAxf6ZGoW2vF2wGVJLDkcf3Y42fB/J5hLyKniomoAzkoXWVIQqb6YlCmnZB7g=
