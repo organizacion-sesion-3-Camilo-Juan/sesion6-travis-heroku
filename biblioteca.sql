@@ -111,6 +111,7 @@ INSERT INTO `videogames` (`name`, `description`, `gamePlatform`, `applicationSub
 --
 -- Estructura de tabla para la tabla `series`
 --
+-- DROP TABLE `series`;
 
 CREATE TABLE IF NOT EXISTS `series` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
